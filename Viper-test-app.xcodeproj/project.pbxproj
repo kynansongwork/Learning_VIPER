@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		EA7AE46C24095D1500CBF121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AE46B24095D1500CBF121 /* AppDelegate.swift */; };
 		EA7AE46E24095D1500CBF121 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AE46D24095D1500CBF121 /* SceneDelegate.swift */; };
-		EA7AE47024095D1500CBF121 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AE46F24095D1500CBF121 /* ViewController.swift */; };
 		EA7AE47324095D1500CBF121 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA7AE47124095D1500CBF121 /* Main.storyboard */; };
 		EA7AE47524095D1600CBF121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA7AE47424095D1600CBF121 /* Assets.xcassets */; };
 		EA7AE47824095D1600CBF121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA7AE47624095D1600CBF121 /* LaunchScreen.storyboard */; };
+		EA7AE48A2409611400CBF121 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AE4812409611400CBF121 /* HomePresenter.swift */; };
+		EA7AE48B2409611400CBF121 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AE4832409611400CBF121 /* HomeWireframe.swift */; };
+		EA7AE48D2409611400CBF121 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AE4862409611400CBF121 /* HomeViewController.swift */; };
+		EA7AE48E2409611400CBF121 /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AE4872409611400CBF121 /* HomeModule.swift */; };
+		EA7AE48F2409611400CBF121 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AE4892409611400CBF121 /* HomeInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA7AE46824095D1500CBF121 /* Viper-test-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Viper-test-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7AE46B24095D1500CBF121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA7AE46D24095D1500CBF121 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA7AE46F24095D1500CBF121 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA7AE47224095D1500CBF121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA7AE47424095D1600CBF121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA7AE47724095D1600CBF121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA7AE47924095D1600CBF121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA7AE4812409611400CBF121 /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		EA7AE4832409611400CBF121 /* HomeWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		EA7AE4862409611400CBF121 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EA7AE4872409611400CBF121 /* HomeModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
+		EA7AE4892409611400CBF121 /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,57 @@
 			children = (
 				EA7AE46B24095D1500CBF121 /* AppDelegate.swift */,
 				EA7AE46D24095D1500CBF121 /* SceneDelegate.swift */,
-				EA7AE46F24095D1500CBF121 /* ViewController.swift */,
 				EA7AE47124095D1500CBF121 /* Main.storyboard */,
+				EA7AE47F2409611400CBF121 /* Home */,
 				EA7AE47424095D1600CBF121 /* Assets.xcassets */,
 				EA7AE47624095D1600CBF121 /* LaunchScreen.storyboard */,
 				EA7AE47924095D1600CBF121 /* Info.plist */,
 			);
 			path = "Viper-test-app";
+			sourceTree = "<group>";
+		};
+		EA7AE47F2409611400CBF121 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EA7AE4802409611400CBF121 /* Presenter */,
+				EA7AE4822409611400CBF121 /* Wireframe */,
+				EA7AE4842409611400CBF121 /* View */,
+				EA7AE4872409611400CBF121 /* HomeModule.swift */,
+				EA7AE4882409611400CBF121 /* Interactor */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EA7AE4802409611400CBF121 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EA7AE4812409611400CBF121 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EA7AE4822409611400CBF121 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				EA7AE4832409611400CBF121 /* HomeWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		EA7AE4842409611400CBF121 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA7AE4862409611400CBF121 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA7AE4882409611400CBF121 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EA7AE4892409611400CBF121 /* HomeInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA7AE47024095D1500CBF121 /* ViewController.swift in Sources */,
+				EA7AE48E2409611400CBF121 /* HomeModule.swift in Sources */,
+				EA7AE48D2409611400CBF121 /* HomeViewController.swift in Sources */,
+				EA7AE48A2409611400CBF121 /* HomePresenter.swift in Sources */,
+				EA7AE48B2409611400CBF121 /* HomeWireframe.swift in Sources */,
 				EA7AE46C24095D1500CBF121 /* AppDelegate.swift in Sources */,
 				EA7AE46E24095D1500CBF121 /* SceneDelegate.swift in Sources */,
+				EA7AE48F2409611400CBF121 /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
